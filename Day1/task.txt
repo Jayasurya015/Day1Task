@@ -1,0 +1,41 @@
+Task: 1
+
+Q)	Difference between HTTP/1.1 and HTTP/2?
+
+For every TCP connection there is only one request and response. But HTTP/1.1 supports connection reuse	Uses multiplexing, over a single TCP connection. It is done using streams and it also provide feature called server push. 
+Introduces a warning header field to carry additional information about status of message(24 status code) and its error reporting is quicker and efficient	Headers and status code of HTTP remains same.
+It uses digest authentication and NTML authentication	Security concern from previous version will continue to be seen in HTTP/2. However it is better equipped to deal with them 
+It has additional header like cache-control	Does not change much in terms of caching with server push. If the client find resource present already in cache it cancel the push stream
+Text Based protocol that is in the readable format	It is a binary protocol
+
+
+
+Q)HTTP Version History?
+
+
+1991	0.9	Online Protocol
+1996	1.0	Building Extensibility  
+1997	1.1	Standardized Protocol
+2015	2.0	Protocol for greater performance
+Draft(2020)	3.0	HTTP over UIC
+
+
+Q)Difference between BrowserJS and NodeJS?
+
+JS is a programming language that is used for writing scripts on the website	Node JS is a java script runtime environment
+It can be run only in browser	Node JS can be run-outside browser
+It is basically used on client side	It is basically used on server side
+JS is cable enough to add HTML and play with DOM	Node JS does not have capability to add HTML tags
+JS can run in any browser engine like JSCore in Safari, SpiderMonkey in FireFox.	Node JS can only run in v8 engine of google chrome
+
+
+Q)What happens when an URL is typed on address-bar of the browser?
+
+1.	Browser checks cache for DNS entry to find he corresponding IP address of the website. It looks for the following cache, If not found in one I continues checking to next until found. - Browser cache, -OS Cache, Router Cache, ISP Cache.
+2.	If not found in cache, ISP’s DNS server initiates a DNS query to find IP address. The request are send in small pockets that continues information content of request & IP  address.
+3.	Browser initiates the TCP connection with server using Synchronize(SYN) and acknowledge (ACK) message.
+4.	Browser sends a HTTP request to server. GET or POST request.
+5.	Server on the host computer handles the request and sends back response in some format like JSON,XML and HTML.
+6.	Server sends out an HTTP response along with status response.
+7.	Browser display HTML content.
+8.	Finally done.
